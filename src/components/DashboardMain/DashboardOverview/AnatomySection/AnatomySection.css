@@ -1,0 +1,64 @@
+.anatomy-container {
+  background: #f8fbff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f1c8b;
+}
+
+.anatomy-body {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.anatomy-img {
+  width: 320px;
+  height: auto;
+  border-radius: 16px;
+}
+
+.healthy-btn {
+  position: absolute;
+  background: #4b45f5;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.heart {
+  top: 20%;
+  right: 1%;
+}
+
+.leg {
+  bottom: 33%;
+  left: 5%;
+  background: #00c0ff;
+}
+
+@media (max-width: 576px) {
+  .anatomy-body {
+    flex-direction: column;
+  }
+
+  .healthy-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+    transform: scale(0.9);
+  }
+
+  .heart,
+  .leg {
+    position: static;
+    margin-top: 10px;
+  }
+}

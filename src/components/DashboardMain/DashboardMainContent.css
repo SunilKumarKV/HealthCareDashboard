@@ -1,0 +1,43 @@
+.dashboard-main-content {
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+  background-color: #fff; /* f5f8ff */
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.left-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-height: o;
+  overflow: hidden;
+}
+
+.act-panel {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.right-panel {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .dashboard-main-content {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+}

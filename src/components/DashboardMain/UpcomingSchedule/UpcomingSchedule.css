@@ -1,0 +1,35 @@
+.upcoming-container {
+  background: #f8fbff;
+  padding: 0 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.schedule-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.upcoming-container h5 {
+  margin-bottom: 5px;
+  padding: 0;
+  color: #c3c3c3;
+  font-size: 15px;
+}
+
+.upcoming-container h3 {
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .schedule-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .upcoming-container h3 {
+    font-size: 24px;
+  }
+}

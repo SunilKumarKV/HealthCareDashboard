@@ -1,0 +1,132 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.header-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 55%;
+  height: 55px;
+  gap: 20px;
+}
+
+.search-bar {
+  padding: 0px 40px 0px 35px;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  background: #fafcfd;
+  outline: none;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #b0b0b0;
+  font-size: 25px;
+}
+
+.bell-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #3543c5;
+  font-size: 25px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 18px;
+  color: #475569;
+  cursor: pointer;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.username {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.add-btn {
+  background-color: #4b45f5;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  /* cursor: pointer; */
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media Quirys for Resposive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-left,
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    height: auto;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .search-bar {
+    font-size: 16px;
+    padding: 10px 35px;
+  }
+
+  .username {
+    font-size: 12px;
+  }
+
+  .add-btn {
+    padding: 10px;
+    font-size: 12px;
+  }
+}

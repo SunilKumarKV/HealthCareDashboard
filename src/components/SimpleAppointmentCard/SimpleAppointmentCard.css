@@ -1,0 +1,16 @@
+.simple-card {
+  background: #e4e7ff;
+  padding: 16px;
+  border-radius: 28px;
+  flex: 1;
+}
+
+.simple-card h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.simple-card p {
+  font-size: 14px;
+  color: #333;
+}
