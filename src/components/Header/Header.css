@@ -15,6 +15,17 @@
   gap: 20px;
 }
 
+.header-logo {
+  display: none;
+  font-size: 24px;
+  font-weight: 700;
+  color: #191963;
+}
+
+.header-logo span {
+  color: #00c8d7;
+}
+
 .search-bar {
   padding: 0px 40px 0px 35px;
   border: 1px solid #f3f3f3;
@@ -88,37 +99,48 @@
 }
 
 /* Media Quirys for Resposive */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 15px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+
+  .header-logo {
+    display: block;
+  }
+
+  .header-left {
+    width: 100%;
+    height: 45px;
     gap: 10px;
   }
 
-  .header-left,
+  .search-bar {
+    padding: 0 35px 0 30px;
+    font-size: 16px;
+  }
+
+  .search-icon,
+  .bell-icon {
+    font-size: 18px;
+  }
+
   .header-right {
     width: 100%;
     justify-content: space-between;
   }
-}
 
-@media (max-width: 576px) {
-  .header-left {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    height: auto;
+  .user-profile {
+    gap: 6px;
   }
 
-  .header-right {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .search-bar {
-    font-size: 16px;
-    padding: 10px 35px;
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
   }
 
   .username {
@@ -128,5 +150,33 @@
   .add-btn {
     padding: 10px;
     font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 15px 0;
+  }
+
+  .header-left {
+    gap: 15px;
+  }
+
+  .search-bar {
+    font-size: 18px;
+  }
+
+  .search-icon,
+  .bell-icon {
+    font-size: 20px;
+  }
+
+  .add-btn {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .username {
+    font-size: 13px;
   }
 }

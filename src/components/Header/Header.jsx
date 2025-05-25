@@ -4,6 +4,10 @@ import "./Header.css";
 export default function Header() {
   return (
     <header className="header">
+      <div className="header-logo">
+        Health<span>care.</span>
+      </div>
+
       <div className="header-left">
         {/*  Header left component */}
         <FaSearch className="search-icon" />

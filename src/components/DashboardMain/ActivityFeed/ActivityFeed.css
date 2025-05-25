@@ -65,60 +65,67 @@
   background: #00c0ff;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .activity-graph {
-    gap: 10px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
   }
 }
 
-@media (max-width: 480px) {
-  .activity-graph {
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .bar-group {
-    margin-bottom: 12px;
-  }
-}
-
-@media (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .activity-container {
     padding: 12px;
+    border-radius: 12px;
     max-height: none;
   }
 
   .activity-header {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .activity-graph {
     gap: 6px;
-  }
-
-  .bar {
-    width: 4px;
   }
 
   .activity-container h3 {
     font-size: 16px;
   }
-}
 
-@media (min-width: 1025px) {
-  .activity-container {
-    width: 100%;
-    max-height: 250px;
+  .activity-header p {
+    font-size: 12px;
+  }
+
+  .activity-graph {
+    gap: 8px;
+    flex-wrap: wrap;
   }
 
   .bar {
-    width: 10px;
+    width: 5px;
+  }
+
+  .day-label {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .activity-container {
+    padding: 16px;
+    border-radius: 16px;
+    max-height: 180px;
+  }
+
+  .bar {
+    width: 6px;
+  }
+
+  .day-label {
+    font-size: 11px;
   }
 
   .activity-container h3 {
-    font-size: 22px;
+    font-size: 18px;
+  }
+
+  .activity-header p {
+    font-size: 13px;
   }
 }

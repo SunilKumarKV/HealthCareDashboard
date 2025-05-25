@@ -34,10 +34,32 @@
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .dashboard-main-content {
+    gap: 15px;
+    padding: 8px;
+  }
+
+  .left-panel,
+  .right-panel {
+    gap: 20px;
+  }
+
+  .act-panel {
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   .dashboard-main-content {
     flex-direction: column;
-    padding: 20px;
     gap: 20px;
+    padding: 10px;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+    flex: none;
   }
 }

@@ -10,9 +10,11 @@ export default function AnatomySection() {
         <div className="zoomplus">
           <FaSearchPlus />
         </div>
-        <img src={anatomy} alt="Anatomy" className="anatomy-img" />
-        <button className="healthy-btn heart">❤️ Healthy Heart</button>
-        <button className="healthy-btn leg">💙 Healthy Leg</button>
+        <div className="anatomy-image-wrapper">
+          <img src={anatomy} alt="Anatomy" className="anatomy-img" />
+          <button className="healthy-btn heart">❤️ Healthy Heart</button>
+          <button className="healthy-btn leg">💙 Healthy Leg</button>
+        </div>
       </div>
     </div>
   );

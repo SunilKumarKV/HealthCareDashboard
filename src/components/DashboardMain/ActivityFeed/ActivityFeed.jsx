@@ -20,7 +20,7 @@ export default function ActivityFeed() {
                 className="bar bar-secondary"
                 style={{ height: `${15 + idx * 5}px` }}
               ></div>
-              {day}
+              <span className="day-label">{day}</span>
             </div>
           )
         )}

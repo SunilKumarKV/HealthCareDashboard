@@ -75,6 +75,8 @@ h3 {
   margin-top: 20px;
   display: flex;
   gap: 20px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
 }
 
 .appointment-card {
@@ -115,17 +117,107 @@ p {
   color: #000;
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .calendar-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calendar-container {
+    padding: 12px 12px 0 12px;
+    border-radius: 12px;
+  }
+
+  .calendar-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .calendar-header h3 {
+    font-size: 16px;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .day-header {
+    font-size: 12px;
   }
 
   .calendar-date {
-    padding: 10px 5px;
+    padding: 6px;
+    border-radius: 10px;
   }
 
   .time-slot {
     font-size: 10px;
-    padding: 2px;
+    padding: 2px 4px;
+  }
+
+  .appointments {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .appointment-card,
+  .appointment-card1 {
+    padding: 10px;
+    border-radius: 16px;
+  }
+
+  .appointment h4 {
+    font-size: 13px;
+  }
+
+  .appointment p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .calendar-container {
+    padding: 16px 16px 0 16px;
+    border-radius: 16px;
+  }
+
+  .calendar-header h3 {
+    font-size: 18px;
+  }
+
+  .arrow-btns span {
+    font-size: 18px;
+  }
+
+  .calendar-date {
+    padding: 8px;
+  }
+
+  .time-slot {
+    font-size: 11px;
+    padding: 3px;
+  }
+
+  .appointments {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .appointment-card,
+  .appointment-card1 {
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .appointment h4 {
+    font-size: 14px;
+  }
+
+  .appointment p {
+    font-size: 13px;
   }
 }

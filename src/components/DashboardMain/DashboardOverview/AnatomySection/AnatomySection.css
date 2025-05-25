@@ -2,6 +2,8 @@
   background: #f8fbff;
   padding: 20px;
   border-radius: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 h2 {
@@ -18,8 +20,14 @@ h2 {
   justify-content: center;
 }
 
+.anatomy-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+}
+
 .anatomy-img {
-  width: 320px;
+  width: 100%;
   height: auto;
   border-radius: 16px;
 }
@@ -32,22 +40,56 @@ h2 {
   border: none;
   border-radius: 8px;
   font-size: 14px;
+  z-index: 10;
+}
+
+.zoomplus {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #d3d3d3;
 }
 
 .heart {
-  top: 20%;
-  right: 1%;
+  top: 23%;
+  right: 8%;
 }
 
 .leg {
   bottom: 33%;
-  left: 5%;
+  left: 1%;
   background: #00c0ff;
 }
 
-@media (max-width: 576px) {
-  .anatomy-body {
-    flex-direction: column;
+@media screen and (max-width: 768px) {
+  .anatomy-container {
+    padding: 12px;
+  }
+
+  .anatomy-image-wrapper {
+    max-width: 260px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .anatomy-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  .heart {
+    top: 22%;
+  }
+
+  .leg {
+    bottom: 32%;
+    left: 5%;
   }
 
   .healthy-btn {
@@ -56,9 +98,28 @@ h2 {
     transform: scale(0.9);
   }
 
-  .heart,
-  .leg {
-    position: static;
-    margin-top: 10px;
+  .anatomy-body {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .anatomy-container {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .anatomy-img {
+    width: 280px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .healthy-btn {
+    font-size: 13px;
+    padding: 6px 12px;
   }
 }

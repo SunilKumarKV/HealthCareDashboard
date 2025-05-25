@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: 46px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .status-card1 {
@@ -53,8 +55,55 @@
   transition: width 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .status-cards {
+    gap: 24px;
+    padding: 10px;
+  }
+
+  .status-card1 {
+    justify-content: center;
+  }
+
   .status-card {
     width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .progress-bar {
+    height: 8px;
+  }
+
+  .text {
+    font-size: 14px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .status-card1 {
+    justify-content: center;
+  }
+
+  .status-card {
+    width: 80%;
+    max-width: none;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .date {
+    font-size: 13px;
   }
 }
