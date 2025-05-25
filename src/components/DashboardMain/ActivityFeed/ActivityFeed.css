@@ -1,7 +1,7 @@
 .activity-container {
   background: #f8fbff;
   padding: 20px;
-  width: 95%;
+  /* width: 95%; */
   border-radius: 20px;
   overflow: hidden;
   flex-shrink: 0;
@@ -26,6 +26,7 @@
   align-items: flex-end;
   gap: 12px;
   margin: auto;
+  justify-content: center;
 }
 
 .bar-group {
@@ -33,6 +34,11 @@
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  margin-right: 12px;
+}
+
+.bar-group:last-child {
+  margin-right: 0;
 }
 
 .bar {
@@ -40,6 +46,11 @@
   justify-content: center;
   width: 8px;
   border-radius: 4px;
+}
+
+.day-label {
+  font-size: 12px;
+  color: #888;
 }
 
 .bar-primary {
@@ -56,23 +67,36 @@
 
 @media (max-width: 768px) {
   .activity-graph {
-    gap: 8px;
-  }
-
-  .bar {
-    width: 6px;
-  }
-
-  .activity-container h3 {
-    font-size: 18px;
+    gap: 10px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .activity-graph {
-    gap: 4px;
-    justify-content: center;
+    gap: 8px;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .bar-group {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .activity-container {
+    padding: 12px;
+    max-height: none;
+  }
+
+  .activity-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .activity-graph {
+    gap: 6px;
   }
 
   .bar {
@@ -81,5 +105,20 @@
 
   .activity-container h3 {
     font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .activity-container {
+    width: 100%;
+    max-height: 250px;
+  }
+
+  .bar {
+    width: 10px;
+  }
+
+  .activity-container h3 {
+    font-size: 22px;
   }
 }
